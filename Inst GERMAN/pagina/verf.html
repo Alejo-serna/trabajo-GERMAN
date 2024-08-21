@@ -1,71 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RETO INSTRUMENTO DE EVALUACION</title>
-    <link rel="stylesheet" href="css/master.css">
+    <title>Mi Página Web</title>
     <style>
         body {
-        margin: 0;
-        font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: purple;
         }
-       header h1 {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        padding: 10px;
+
+        header {
+            background-color: #797979b7;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header img.serna {
+            width: 50px;
+            height: 50px;
        }
-       header h3 {
-        align-items: center;
-        justify-content: center;
-        display: flex;
-       }
-       nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-       }
+
+        .menu-btn {
+            cursor: pointer;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+    
+        }
+
+
+        .menu {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: gainsboro;
+            transition: 0.3s;
+            padding-top: 60px;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+        .menu-item1 {
+            background-color: red;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding: 10px;
+        }
+        .menu-item2 {
+            background-color: mediumaquamarine;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding: 10px;
+        }
+        .menu-item3 {
+            background-color: royalblue;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding: 10px;
+        }
+
+        .submenu {
+            background-color: rgb(201, 194, 194);
+            max-height: 500px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+
+        .submenu::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .submenu::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .submenu::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        .submenu::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+        }
+
+        .menu a:hover {
+            background-color: #ddd;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu .submenu {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .menu .submenu a {
+            font-size: 16px;
+        }
+
+        .menu .menu-item {
+            cursor: pointer;
+        }
     </style>
-   
 </head>
 
 <body>
-    </nav>
-    <main>
-        <header>
-            <h1>LINEAS DE TIEMPO</h1>
-            <h3>Windows and apple</h3>
-            <nav class="navbar">
-                <div class="menu">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#Windows">Windows</a></li>
-                    <ul class="dropdown-menu">
-                        <li><a href="#electronica">Electrónica</a></li>
-                        <li><a href="#ropa">Ropa</a></li>
-                        <li><a href="#hogar">Hogar</a></li>
+    <header>
+        <div class="menu-btn" onclick="toggleMenu()">&#9776; VERSIONES</div>
+        <div class="title">LINEAS DE TIEMPO</div>
+        <div class="user-info">
+            <span>SERNITA</span>
+            <img class="serna" src="images/f48f0d54-92aa-4853-ab0b-51438d51ce1d.jpg" alt="SERNITA">
+        </div>
+    </header>
 
-                <ul class="nav-menu2">
-                    <li><a href="#Apple">Apple</a></li>
-                <ul class="dropdown-menu2">
-                    <li><a href="#electronica">Electrónica</a></li>
-                    <li><a href="#ropa">Ropa</a></li>
-                    <li><a href="#hogar">Hogar</a></li>
-                </ul>
-            </ul>
-        </nav>
-        </header>
-        <section>
+    <section>
+    <nav class="menu" id="sideMenu">
+        <div class="back-arrow" onclick="toggleMenu()">&#8592;</div>
+        <div class="menu-item1" onclick="toggleSubmenu('apple')"> APPLE</div>
+        <div class="submenu" id="apple">
             
-        </section>
-        
-    </main>
-</body>
-</html>
+            
+
+        </div>
+        <div class="menu-item2" onclick="toggleSubmenu('windowsHome')"> WINDOWS HOME</div>
+        <div class="submenu" id="windowsHome">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <a href="#">Windows 2.0 (2.0)</a>
+            <a href="#">Windows 3.0 (3.0)</a>
+            <a href="#">Windows 3.1 (3.1)</a>
+            <a href="#">Windows 95 (4.0)</a>
+            <a href="#">Windows 98 (4.10)</a>
+            <a href="#">Windows ME (4.90)</a>
+            <a href="#">Windows 2000 (5.0)</a>
+            <a href="#">Windows XP (5.1)</a>
+            <a href="#">Windows Vista (6.0)</a>
+            <a href="#">Windows 7 (6.1)</a>
+            <a href="#">Windows 8 (6.2)</a>
+            <a href="#">Windows 8.1 (6.3)</a>
+            <a href="#">Windows 10 (10.0)</a>
+            <a href="#">Windows 11 (10.0)</a>
