@@ -8,7 +8,6 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: cursive, sans-serif;
             transition: margin-left 0.3s ease;
             background-color: violet;
         }
@@ -56,7 +55,8 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-            background-color: #444;
+            background-color: #c54a4a;
+            border: 4px solid black;
             display: none;
             position: relative;
             left: 0;
@@ -102,7 +102,7 @@
         .bar {
             width: 25px;
             height: 3px;
-            background-color: #333;
+            background-color: rgb(187, 50, 50);
             margin: 5px 0;
         }
 
@@ -166,6 +166,32 @@
             
         }
 
+        div nav ul li#windows-empresa {
+            background-color: #555;
+            text-align: center;
+            border: 4px solid rgb(61, 58, 58);
+            font-family: cursive, sans-serif;
+            color:azure
+        }
+
+        div nav ul li#windows-home {
+            background-color: #555;
+            text-align: center;
+            border: 4px solid rgb(61, 58, 58);
+            font-family: cursive, sans-serif;
+            color:azure
+        }
+
+        div nav ul li#apple-menu {
+            background-color: #555;
+            text-align: center;
+            border: 4px solid rgb(61, 58, 58);
+            font-family: cursive, sans-serif;
+            color:azure
+        }
+
+        
+
     </style>
 </head>
 <body>
@@ -173,7 +199,8 @@
         <nav>
             <ul>
                 <li id="windows-home">
-                    <a href="#">Windows Home</a>
+                    <a href="#"><u>Windows Home</u></a>
+                    <br>
                     <ul id="windows-home-versions">
                         <li><a href="#" data-version="95">95</a></li>
                         <li><a href="#" data-version="98">98</a></li>
@@ -187,8 +214,10 @@
                         <li><a href="#" data-version="11">11</a></li>
                     </ul>
                 </li>
+                <br>
                 <li id="windows-empresa">
-                    <a href="#">Windows Empresa</a>
+                    <a href="#"><u>Windows Empresa</u></a>
+                    <br>
                     <ul id="windows-versions">
                         <li><a href="#" data-version="NT 3.1">NT 3.1</a></li>
                         <li><a href="#" data-version="NT 4.0">NT 4.0</a></li>
@@ -201,8 +230,10 @@
                         <li><a href="#" data-version="11 Pro">11 Pro</a></li>
                     </ul>
                 </li>
+                <br>
                 <li id="apple-menu">
-                    <a href="#">Apple</a>
+                    <a href="# "><u>Apple</u></a>
+                    <br>
                     <ul id="apple-versions">
                         <li><a href="#" data-version="Macintosh 128K">Macintosh 128K</a></li>
                         <li><a href="#" data-version="Macintosh 512K">Macintosh 512K</a></li>
@@ -249,8 +280,6 @@
         <div id="version-info">
             <h2 id="version-title">Selecciona la version que desees.</h2>
             <p id="version-description">Aquí se mostrará la descripción de la versión seleccionada tanto de Apple como de Windows.</p>
-            <br>
-            <img src="images/manos-persona-escribiendo-teclado-computadora-portatil-cerca-mientras-trabaja-inteligente-linea_1227.jpg" alt="#esc" class="esc">
         </div>
 
         <!-- Pie de página -->
